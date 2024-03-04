@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TextBasedRPG.GamePage"
+             BackgroundColor="Black"
+             Shell.NavBarIsVisible="false">
+      <Grid>
+      <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+      </Grid.RowDefinitions> 
+        <Label 
+            x:Name="labelTexto"
+            TextColor="White"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            FontSize="20"
+            FontFamily="CachetStdBold"/>
+        <Button 
+            x:Name="buttoncontinuar"
+            Clicked="OnButtonVerMaisClicked"
+            Text="continuar"
+            BackgroundColor="#221BF0"
+            BorderColor="White"
+            TextColor="White"
+            FontSize="18"
+            HeightRequest="50"
+            CornerRadius="25"
+            HorizontalOptions="Fill"
+            FontFamily="CachetStdBold"
+            Grid.Row="1"/>
+        <Button 
+            x:Name="buttonResposta01"
+            Clicked="OnButton01Clicked"
+            BackgroundColor="#b4d1e1"
+            TextColor="White"
+            HeightRequest="50"
+            CornerRadius="10"
+            FontSize="16"
+            HorizontalOptions="Fill"
+            FontFamily="CachetStdBold"
+            Grid.Row="2"/>
+        <Button 
+            x:Name="buttonResposta02"
+            Clicked="OnButton01Clicked"
+            BackgroundColor="#b4d1e1"
+            TextColor="White"
+            HeightRequest="50"
+            CornerRadius="10"
+            FontSize="16"
+            HorizontalOptions="Fill"
+            FontFamily="CachetStdBold"
+            Grid.Row="3"/>
+        <Button 
+            x:Name="buttonResposta03"
+            Clicked="OnButton01Clicked"
+            BackgroundColor="#b4d1e1"
+            TextColor="White"
+            HeightRequest="50"
+            CornerRadius="10"
+            FontSize="16"
+            HorizontalOptions="Fill"
+            FontFamily="CachetStdBold"
+            Grid.Row="4"/>
+    <VerticalStackLayout>
+        <Label 
+            Text="Game Over"
+            TextColor="White"     
+            FontSize="30"
+            FontFamily="Papyrus"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
+        <Button 
+            Text="continuar de novo"
+            Clicked="OnGameOverButtonClicked"
+            BackgroundColor="#b4d1e1"
+            TextColor="White"
+            HeightRequest="50"
+            CornerRadius="10"
+            FontSize="14"
+            HorizontalOptions="Fill"
+            FontFamily="CachetStdBold"/>
+      <VerticalStackLayout>
+     </Grid>
+   </ContentPage> 
+

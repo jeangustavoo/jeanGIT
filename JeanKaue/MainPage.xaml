@@ -4,36 +4,40 @@
              x:Class="JeanKaue.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <Grid>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+        <Image
+                Source="capajogo.jpg"
+                HorizontalOptions="Center"
+                Aspect= "AspectFill" />
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+        <Label
+                Text="Escrevendo carreira"
+                TextColor= "white"
+                FontSize="50"
+                HorizontalOptions="Center" 
+                VerticalOptions= "Center"/>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+        <Button
+                Text= "Começar"
+                Clicked="OnMenuStartButtonClicked"
+                HeightRequest="40"
+                CornerRadius="20"
+                BackgroundColor="#38F00C"
+                TextColor="White"
+                FontSize="20"/>
+        <Button
+                Text= "Sobre"
+                Clicked="OnMenuStartButtonClicked"
+                HeightRequest="40"
+                CornerRadius="20"
+                BackgroundColor="#7EF0A2"
+                TextColor="White"
+                FontSize="20"/>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+
+                
+           
 
         </VerticalStackLayout>
     </ScrollView>
