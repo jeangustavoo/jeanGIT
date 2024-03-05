@@ -5,41 +5,48 @@
 
     <ScrollView>
     <Grid>
-
-        <Image
+  <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="60"/>
+      </Grid.RowDefinitions> 
+        <Image Grid.Row="0"
+               Grid.RowSpan="5"
                 Source="capajogo.jpg"
                 HorizontalOptions="Center"
-                Aspect= "AspectFill" />
+                VerticalOptions="FillAndExpand"
+                Aspect= "AspectFill"/>
 
         <Label
                 Text="Escrevendo carreira"
-                TextColor= "white"
+                TextColor= "lightgreen"
+                 Margin="40"
                 FontSize="50"
+                FontFamily="Mercado"
                 HorizontalOptions="Center" 
-                VerticalOptions= "Center"/>
-
+                Grid.Row="0"/>
+                
         <Button
                 Text= "Começar"
-                Clicked="OnMenuStartButtonClicked"
-                HeightRequest="40"
-                CornerRadius="20"
+                HeightRequest="50"
+                CornerRadius="25"
                 BackgroundColor="#38F00C"
                 TextColor="White"
-                FontSize="20"/>
+                 Margin="0,0,0,10"
+                FontSize="20"
+                Grid.Row="2"/>
         <Button
                 Text= "Sobre"
-                Clicked="OnMenuStartButtonClicked"
-                HeightRequest="40"
-                CornerRadius="20"
+                HeightRequest="50"
+                CornerRadius="25"
                 BackgroundColor="#7EF0A2"
                 TextColor="White"
-                FontSize="20"/>
+                FontSize="20"
+                Grid.Row="3"/>
 
-
-                
-           
-
-        </VerticalStackLayout>
+        </Grid>
     </ScrollView>
 
 </ContentPage>
