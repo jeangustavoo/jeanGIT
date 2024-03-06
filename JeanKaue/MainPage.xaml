@@ -30,6 +30,7 @@
                 
         <Button
                 Text= "Começar"
+                Clicked="ClicarParaComeçarOJogo"
                 HeightRequest="50"
                 CornerRadius="25"
                 BackgroundColor="#38F00C"
@@ -39,14 +40,55 @@
                 Grid.Row="2"/>
         <Button
                 Text= "Sobre"
+                Clicked="ClicarParaEntrarNoSobre"
                 HeightRequest="50"
                 CornerRadius="25"
                 BackgroundColor="#7EF0A2"
                 TextColor="White"
                 FontSize="20"
                 Grid.Row="3"/>
+        
+
+        <Frame
+           x:Name="LinhaAberta"
+            Grid.RowSpan="5"
+           IsVisible="false"
+           BackgroundColor="#07040d"
+           HorizontalOptions="Fill"
+           VerticalOptions="Fill">
+
+        <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="90"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Label 
+        Text="Sobre"
+        TextColor="White"
+        FontSize="30"
+        HorizontalOptions="Center"
+        Grid.Row="0"/>
+
+        <Button Text="voltar"
+                Clicked="QuandoClicarVoltar"
+                HeightRequest="50"
+                CornerRadius="25"
+                BackgroundColor="#4db26f"
+                TextColor="White"
+                FontSize="20"
+                Grid.Row="2"/>
+        <Label
+        Text="Esse aplicativo foi uma criação de Kauê Macedo e Jean Gustavo, dois alunos do colégio Sesi com a intenção de trazer uma carreira de futebolista a você meu caro jogador."
+        TextColor="White"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        FontSize="20"
+        Grid.Row="1"/>
 
         </Grid>
-    </ScrollView>
+        </Frame>
+        </Grid>
+        </ScrollView>
 
 </ContentPage>
