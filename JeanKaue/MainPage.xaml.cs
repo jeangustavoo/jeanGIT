@@ -9,7 +9,6 @@ public partial class MainPage : ContentPage
 	}
 	 private void ClicarParaComeçarOJogo(object sender, EventArgs args)
   {
-    if (Application.Current != null)
       Application.Current.MainPage = new GamePage();
   }
   private void ClicarParaEntrarNoSobre(object sender, EventArgs args)
