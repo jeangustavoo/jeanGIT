@@ -18,7 +18,7 @@
             HorizontalOptions="Center"
             VerticalOptions="Center"
             FontSize="20"
-            FontFamily="CachetStdBold"/>
+            FontFamily="Payback"/>
         <Button 
             x:Name="buttoncontinuar"
             Clicked="QuandoClicarContinuar"
@@ -33,18 +33,9 @@
             FontFamily="Payback"
             Grid.Row="1"/>
 
-        <Button
-            Text="voltar"
-            Clicked="QuandoClicarVoltar"
-            HeightRequest="50"
-            CornerRadius="25"
-            BackgroundColor="#4db26f"
-            TextColor="White"
-            FontSize="20"
-            Grid.Row="5"/>
-        >
         <Button 
             x:Name="buttonResposta01"
+            Clicked= "clicarresposta1"
             BackgroundColor="#b4d1e1"
             TextColor="White"
             HeightRequest="50"
@@ -55,6 +46,7 @@
             Grid.Row="2"/>
         <Button 
             x:Name="buttonResposta02"
+            Clicked= "clicarresposta2"
             BackgroundColor="#b4d1e1"
             TextColor="White"
             HeightRequest="50"
@@ -65,6 +57,7 @@
             Grid.Row="3"/>
         <Button 
             x:Name="buttonResposta03"
+            Clicked= "clicarresposta3"
             BackgroundColor="#b4d1e1"
             TextColor="White"
             HeightRequest="50"
@@ -74,6 +67,14 @@
             FontFamily="Payback"
             Grid.Row="4"/>
     <VerticalStackLayout>
+       <Frame
+           x:Name="frameAposentou"
+           IsVisible="false"
+           BorderColor="#801208"
+           BackgroundColor="#801208"
+           Margin="10,0,10,10"
+           Grid.Row="1"
+           Grid.RowSpan="4">
         <Label 
             Text="Aposentou"
             TextColor="White"     
@@ -82,14 +83,16 @@
             HorizontalOptions="Center"
             VerticalOptions="Center"/>
         <Button 
-            Text="continuar de novo"
-            BackgroundColor="#b4d1e1"
+            Text="Recomeçar"
+            Clicked="QuandoClicarRecomeçar"
+            BackgroundColor="#0017ad"
             TextColor="White"
             HeightRequest="50"
             CornerRadius="10"
             FontSize="14"
             HorizontalOptions="Fill"
             FontFamily="Payback"/>
+            </Frame>
       </VerticalStackLayout>
      </Grid>
    </ContentPage> 

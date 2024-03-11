@@ -13,7 +13,7 @@ public partial class GamePage : ContentPage
     historia.Add(new HistoryStep()
     {
  Id = 0,
-      Texto = "Salve jogador, parece que você quer ter uma carreira brilhante pela frente, então vamos começar?"
+      Texto = "Salve jogador, parece que você quer ter uma carreira brilhante pela frente, então vamos começar?",
       TemResposta=false
     });
     historia.Add(new HistoryStep()
@@ -49,32 +49,92 @@ public partial class GamePage : ContentPage
       Id = 4,
       Texto = "Você fez a escolha certa, virou um dos maiores idolos no Bahia, ganhou varios titulos importantes para o clube. Parabens jogador!",
       aposentadoriajogador=false,
+
     });
      historia.Add(new HistoryStep()
     {
       Id = 998,
       Texto = "Seu time caiu!",
       TemResposta=false,
+      aposentadoriajogador=true
+
     });
      historia.Add(new HistoryStep()
     {
       Id = 999,
       Texto = "Seu time faliu e sua carreira acabou!",
       TemResposta=false,
+      aposentadoriajogador=true
+
     });
      historia.Add(new HistoryStep()
     {
       Id = 1000,
       Texto = "APOSENTOU!!!",
       TemResposta=false,
+      aposentadoriajogador=true
     });
-//void QuandoClicarContinuar(object sender, EventArgs args)
-  //{
-   // var proximoId = HistoryStepAtual.Id + 1;
-    //TrocaHistoryStepAtual(proximoId);
-  //}
-// private void QuandoClicarVoltar(object sender, EventArgs args)
- // {
-    //LinhaAberta.IsVisible = false;
-  //}
+    Iniciar();
+	}
+    void Iniciar()
+  {
+    TrocaHistoryStepAtual(0);
+  }
+  void PreencherPagina()
+  {
+    labelTexto.Text = HistoryStepAtual.Texto;
+
+    if (HistoryStepAtual.aposentadoriajogador)
+      frameAposentou.IsVisible = true;
+    else
+      frameAposentou.IsVisible = false;
+
+    if (HistoryStepAtual.TemResposta)
+    {
+      buttoncontinuar.IsVisible = false;
+      buttonResposta01.IsVisible = true;
+      buttonResposta02.IsVisible = true;
+      buttonResposta03.IsVisible = true;
+      buttonResposta01.Text = HistoryStepAtual.TextoDaResposta01;
+      buttonResposta02.Text = HistoryStepAtual.TextoDaResposta02;
+      buttonResposta03.Text = HistoryStepAtual.TextoDaResposta03;
+    }
+    else
+    {
+      buttoncontinuar.IsVisible = true;
+      buttonResposta01.IsVisible = false;
+      buttonResposta02.IsVisible = false;
+      buttonResposta03.IsVisible = false;
+    }
+  }
+   void TrocaHistoryStepAtual(int id)
+  {
+    HistoryStepAtual = historia.Where(d => d.Id == id).First();
+    PreencherPagina();
+  }
+
+    void QuandoClicarContinuar(object sender, EventArgs args)
+  {
+    var proximoId = HistoryStepAtual.Id + 1;
+    TrocaHistoryStepAtual(proximoId);
+  }
+
+    void clicarresposta1 (object sender, EventArgs args)
+  {
+    TrocaHistoryStepAtual(HistoryStepAtual.IdLevelResposta01);
+  }
+
+    void clicarresposta2 (object sender, EventArgs args)
+  {
+    TrocaHistoryStepAtual(HistoryStepAtual.IdLevelResposta02);
+  }
+
+    void clicarresposta3 (object sender, EventArgs args)
+  {
+    TrocaHistoryStepAtual(HistoryStepAtual.IdLevelResposta03);
+  }
+    void QuandoClicarRecomeçar(object sender, EventArgs args)
+  {
+    Iniciar();
+  }
 }
