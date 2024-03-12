@@ -47,8 +47,14 @@ public partial class GamePage : ContentPage
     historia.Add(new HistoryStep()
     {
       Id = 4,
-      Texto = "Você fez a escolha certa, virou um dos maiores idolos no Bahia, ganhou varios titulos importantes para o clube. Parabens jogador!",
-      aposentadoriajogador=false,
+      Texto = "Você fez a escolha certa, virou um dos maiores idolos no Bahia, ganhou varios titulos importantes para o clube. Parabens jogador! Mas chegou a hora de se aposentar, como você deseja que isso seja?",
+      TemResposta=true,
+      TextoDaResposta01="Um jogo de despedida",
+      TextoDaResposta02="Entrar para a diretoria do time",
+      TextoDaResposta03="Não se aposentar e tentar salvar o ABC do rebaixamento.",
+      IdLevelResposta01=1000,
+      IdLevelResposta02=1000,
+      IdLevelResposta03=998,
 
     });
      historia.Add(new HistoryStep()
@@ -71,7 +77,6 @@ public partial class GamePage : ContentPage
     {
       Id = 1000,
       Texto = "APOSENTOU!!!",
-      TemResposta=false,
       aposentadoriajogador=true
     });
     Iniciar();
