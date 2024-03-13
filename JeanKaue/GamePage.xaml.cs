@@ -43,6 +43,7 @@ public partial class GamePage : ContentPage
       TextoDaResposta02="Sim, desejo receber um salário melhor!",
       IdLevelResposta01=4,
       IdLevelResposta02=998,
+      IdLevelResposta03=3,
     });
     historia.Add(new HistoryStep()
     {
@@ -62,15 +63,12 @@ public partial class GamePage : ContentPage
       Id = 998,
       Texto = "Seu time caiu!",
       TemResposta=false,
-      aposentadoriajogador=true
-
     });
      historia.Add(new HistoryStep()
     {
       Id = 999,
       Texto = "Seu time faliu e sua carreira acabou!",
       TemResposta=false,
-      aposentadoriajogador=true
 
     });
      historia.Add(new HistoryStep()

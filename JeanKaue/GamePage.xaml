@@ -66,15 +66,14 @@
             HorizontalOptions="Fill"
             FontFamily="Payback"
             Grid.Row="4"/>
-    <VerticalStackLayout>
+    
        <Frame
            x:Name="frameAposentou"
            IsVisible="false"
-           BorderColor="#801208"
-           BackgroundColor="#801208"
-           Margin="10,0,10,10"
+           BackgroundColor="Black"
+           BorderColor="Black"
            Grid.Row="1"
-           Grid.RowSpan="4">
+           Grid.RowSpan="3">
         <Label 
             Text="Aposentou"
             TextColor="White"     
@@ -88,12 +87,12 @@
             BackgroundColor="#0017ad"
             TextColor="White"
             HeightRequest="50"
-            CornerRadius="10"
+            CornerRadius="25"
             FontSize="14"
             HorizontalOptions="Fill"
-            FontFamily="Payback"/>
+            FontFamily="Payback"
+            Grid.Row="1"/>
             </Frame>
-      </VerticalStackLayout>
      </Grid>
    </ContentPage> 
 
