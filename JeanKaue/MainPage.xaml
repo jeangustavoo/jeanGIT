@@ -82,7 +82,8 @@
                 FontSize="20"
                 Grid.Row="2"/>
         <Label
-        Text="Esse aplicativo foi uma criação de Kauê Macedo e Jean Gustavo, dois alunos do colégio Sesi com a intenção de trazer uma carreira de futebolista a você meu caro jogador."
+        Text="Esse aplicativo foi uma criação de Kauê Macedo Roberto e Jean Gustavo Cândido, dois alunos do colégio Sesi Apucarana, no 3º ano do ensino médio, na supervisão de Thiago Macedo, em Março de 2024.
+         Com a intenção de trazer uma carreira de futebolista a você meu caro jogador."
         TextColor="White"
         HorizontalOptions="Center"
         VerticalOptions="Center"
