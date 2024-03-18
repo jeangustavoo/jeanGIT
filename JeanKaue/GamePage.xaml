@@ -27,7 +27,7 @@
             BorderColor="White"
             TextColor="White"
             FontSize="18"
-            HeightRequest="25"
+            HeightRequest="50"
             CornerRadius="25"
             HorizontalOptions="Fill"
             FontFamily="Payback"
